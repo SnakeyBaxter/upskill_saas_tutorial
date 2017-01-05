@@ -1,9 +1,9 @@
 class ContactsController < ApplicationController
   def new
-  @contact = Contact.new
+  @contact = Contact.new  #blank contact form object created
   end
   
-def create
+def create  #save to database
   @contact = Contact.new(contact_params)
   if @contact.save
      flash[:success] = "Message sent."
